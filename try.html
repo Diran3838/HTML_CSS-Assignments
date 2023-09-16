@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 20px;
+        }
+        /* h1{
+            display: block;
+        } */
+        input{
+            margin: 3px;
+        }
+        div{
+            display: block;
+            text-align: center;
+        }
+        button{
+            margin-top: 10px;
+        }
+        label{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="" name="fm">
+    <input type="password"  id="form1" placeholder="Enter Your Password" onfocus="myfocus()" onkeyup="passwordStrength()" onblur="myblur()">
+    <span id="data">No Strength </span>
+    </form>
+    <script>
+        function myfocus(){
+            document.getElementById("form1").style.backgroundColor="red";
+        }
+        function myblur(){
+            document.getElementById("form1").style.backgroundColor="blue";
+        }
+
+        function passwordStrength(){
+            var str = document.getElementById("form1").value;
+            if((str.length > 0) && (str.length <4))
+            {
+                document.getElementById("data").innerHTML = "Poor";
+            }
+            else if((str.length >= 4 ) && (str.length < 7)){
+                document.getElementById("data").innerHTML = "Medium";
+            }
+            else{
+                document.getElementById("data").innerHTML = "Excellent"
+            }
+            
+        }
+    </script> -->
+
+    <div>
+        <h1>Gmail Login</h1>
+        <label id="lab" style="visibility: hidden;"> </label><br>
+        <input type="text" name="" id="txt" placeholder="Username"><br>
+        <input type="password" name="" id="pwd" placeholder="Password"><br>
+        <button id="btn" onclick="verify()"> Login </button>
+    </div>
+    <script>
+        function verify(){
+            document.getElementById("lab").style.visibility="visible";
+            document.getElementById("lab").innerHTML = "Invalid Username or Password";
+            
+            var usr_len = document.getElementById("txt").value;
+            var pwd_len = document.getElementById("pwd").value;
+            if((usr_len.length<5) || (pwd_len.length<5)){
+                document.getElementById("lab").innerHTML = "Invalid Username or Password";
+            }
+            else
+            {
+                document.getElementById("lab").innerHTML = "Successfully logged in";
+            }
+        }
+    </script>
+</body>
+</html>
